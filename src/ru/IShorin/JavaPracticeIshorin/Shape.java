@@ -3,12 +3,23 @@ package ru.IShorin.JavaPracticeIshorin;
 public class Shape {
     String name;
     int numberOfAngles;
-    double Perimeter;
+    double perimeter;
+    double square;
 
-    public Shape(String name, int numberOfAngles, double perimeter) {
+    public double getSquare() {
+        return square;
+    }
+
+    public void setSquare(double square) {
+        this.square = square;
+    }
+
+    public Shape(String name, int numberOfAngles, double perimeter, double square) {
         this.name = name;
         this.numberOfAngles = numberOfAngles;
-        Perimeter = perimeter;
+        this.perimeter = perimeter;
+        this.square=square;
+
     }
 
     public String getName() {
@@ -28,10 +39,10 @@ public class Shape {
     }
 
     public double getPerimeter() {
-        return Perimeter;
+        return perimeter;
     }
 
     public void setPerimeter(double perimeter) {
-        Perimeter = perimeter;
+        this.perimeter = perimeter;
     }
 }

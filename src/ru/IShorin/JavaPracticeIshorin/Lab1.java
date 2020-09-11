@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Lab1 {
-    public void run(){
+    public static void run(){
         Scanner in = new Scanner(System.in);
         Random rand=new Random();
         int n=in.nextInt();

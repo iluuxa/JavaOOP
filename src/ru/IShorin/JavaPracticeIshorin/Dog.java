@@ -12,6 +12,14 @@ public class Dog {
         return (this.age*7);
     }
 
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
     public String getName() {
         return name;
     }
