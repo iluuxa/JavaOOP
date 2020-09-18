@@ -14,6 +14,10 @@ public class Main {
             break;
             case 3: Lab3.run();
             break;
+            case 5: Lab5.run();
+            break;
+            case 6: Lab6.run();
+            break;
         }
     }
 }
