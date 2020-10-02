@@ -3,6 +3,11 @@ package ru.IShorin.JavaPracticeIshorin;
 public class Circle extends Shape {
     double radius;
 
+    public Circle(int h,int s, int b, int x, int y, double radius) {
+        super(h,s,b, x, y);
+        this.radius = radius;
+    }
+
     public Circle(int radius) {
         angles=0;
         this.radius=radius;

@@ -18,6 +18,10 @@ public class Main {
             break;
             case 6: Lab6.run();
             break;
+            case 7: Lab7.run();
+            break;
+            case 8: Lab8.run(args);
+            break;
         }
     }
 }

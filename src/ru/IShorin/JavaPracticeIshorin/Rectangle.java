@@ -4,6 +4,12 @@ public class Rectangle extends Shape {
     double sidea;
     double sideb;
 
+    public Rectangle(int h,int s, int b, int x, int y, double sidea, double sideb) {
+        super(h, s, b, x, y);
+        this.sidea = sidea;
+        this.sideb = sideb;
+    }
+
     public Rectangle(double sidea, double sideb) {
         angles=4;
         this.sidea = sidea;
