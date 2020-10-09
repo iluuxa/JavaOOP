@@ -1,17 +1,18 @@
-package ru.IShorin.JavaPracticeIshorin;
+package ru.IShorin.JavaPracticeIshorin.lab7;
 
 public abstract class Furniture {
     double price;
     int id;
-    String material;
     String name;
+
+
 
     public Furniture(double price, int id, String name) {
         this.price = price;
         this.id = id;
         this.name = name;
     }
-
+    public abstract String getMaterial();
     public double getPrice() {
         return price;
     }

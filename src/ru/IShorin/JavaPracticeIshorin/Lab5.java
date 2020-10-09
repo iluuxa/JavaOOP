@@ -1,5 +1,9 @@
 package ru.IShorin.JavaPracticeIshorin;
 
+import ru.IShorin.JavaPracticeIshorin.Lab8.Circle;
+import ru.IShorin.JavaPracticeIshorin.Lab8.Rectangle;
+import ru.IShorin.JavaPracticeIshorin.Lab8.Square;
+
 public class Lab5 {
     public static void run(){
         Circle circle=new Circle(5);

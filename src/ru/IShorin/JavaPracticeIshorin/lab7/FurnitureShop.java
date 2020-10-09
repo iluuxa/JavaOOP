@@ -1,4 +1,4 @@
-package ru.IShorin.JavaPracticeIshorin;
+package ru.IShorin.JavaPracticeIshorin.lab7;
 
 public class FurnitureShop {
     static Furniture table1 = new Table(1000,0,"Wooden Table");

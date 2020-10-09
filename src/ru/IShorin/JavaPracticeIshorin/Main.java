@@ -1,5 +1,9 @@
 package ru.IShorin.JavaPracticeIshorin;
 
+import ru.IShorin.JavaPracticeIshorin.Lab11.Lab11;
+import ru.IShorin.JavaPracticeIshorin.lab7.Lab7;
+import ru.IShorin.JavaPracticeIshorin.Lab8.Lab8;
+
 import java.util.Scanner;
 
 public class Main {
@@ -22,6 +26,12 @@ public class Main {
             break;
             case 8: Lab8.run(args);
             break;
+            case 10:
+                Lab10 lab10=new Lab10();
+                lab10.run();
+            break;
+            case 11:
+                Lab11.run();
         }
     }
 }

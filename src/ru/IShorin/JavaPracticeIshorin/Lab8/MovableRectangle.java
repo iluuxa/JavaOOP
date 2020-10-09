@@ -1,6 +1,6 @@
-package ru.IShorin.JavaPracticeIshorin;
+package ru.IShorin.JavaPracticeIshorin.Lab8;
 
-public class MovableRectangle extends Rectangle implements Movable{
+public class MovableRectangle extends Rectangle implements Movable {
     int x;
     int y;
     int speedx;

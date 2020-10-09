@@ -1,4 +1,4 @@
-package ru.IShorin.JavaPracticeIshorin;
+package ru.IShorin.JavaPracticeIshorin.Lab8;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -29,7 +29,7 @@ public class Frame3 extends Frame {
     public void paint(Graphics graphics) {
         try {
             Image image = ImageIO.read(new File("C://Users/Saint/IdeaProjects/JavaOOP/images.jpg"));
-            graphics.drawImage(image, 0, 0, 69*j, 100, j * 69, i * 72, 69 + j * 69, 72 + i * 72, null);
+            graphics.drawImage(image, 100, 100, 200, 200, j * 69, i * 72, 69 + j * 69, 72 + i * 72, null);
         } catch (Exception e) {
             e.printStackTrace();
         }

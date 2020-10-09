@@ -1,5 +1,7 @@
 package ru.IShorin.JavaPracticeIshorin;
 
+import ru.IShorin.JavaPracticeIshorin.Lab8.MovableRectangle;
+
 import java.util.Scanner;
 
 public class Lab6 {

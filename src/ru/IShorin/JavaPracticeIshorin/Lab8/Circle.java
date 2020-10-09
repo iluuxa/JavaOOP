@@ -1,4 +1,4 @@
-package ru.IShorin.JavaPracticeIshorin;
+package ru.IShorin.JavaPracticeIshorin.Lab8;
 
 public class Circle extends Shape {
     double radius;

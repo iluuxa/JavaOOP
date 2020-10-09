@@ -1,4 +1,4 @@
-package ru.IShorin.JavaPracticeIshorin;
+package ru.IShorin.JavaPracticeIshorin.lab7;
 
 import java.util.Scanner;
 
@@ -12,7 +12,7 @@ public class Lab7 {
             person.putInBasket(in.nextInt());
         }
         else{
-            input=in.next();
+            input=in.nextLine();
             if(input.equals("show")){person.show();}
             else {
                 person.putInBasket(input);
@@ -23,7 +23,7 @@ public class Lab7 {
                 person.putInBasket(in.nextInt());
             }
             else{
-                input=in.next();
+                input=in.nextLine();
                 if(input.equals("show")){person.show();}
                 else {
                     person.putInBasket(input);
