@@ -37,7 +37,8 @@ public class Main {
             case 12:
                 Lab12.run();
             case 13:
-                Lab13.run();
+                Lab13 lab13=new Lab13();
+                lab13.run();
         }
     }
 }
