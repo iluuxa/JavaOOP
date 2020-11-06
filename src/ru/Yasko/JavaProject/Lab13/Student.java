@@ -1,20 +1,20 @@
 package ru.Yasko.JavaProject.Lab13;
 
 public class Student {
-    private int id;
+    private int IDNumber;
     private int gpa;
 
-    public Student(int id, int gpa) {
-        this.id = id;
+    public Student(int IDNumber, int gpa) {
+        this.IDNumber = IDNumber;
         this.gpa = gpa;
     }
 
-    public int getId() {
-        return id;
+    public int getIDNumber() {
+        return IDNumber;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIDNumber(int IDNumber) {
+        this.IDNumber = IDNumber;
     }
 
     public int getGpa() {
