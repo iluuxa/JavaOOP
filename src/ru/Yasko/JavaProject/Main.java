@@ -2,6 +2,7 @@ package ru.Yasko.JavaProject;
 
 import ru.Yasko.JavaProject.Lab11.Lab11;
 import ru.Yasko.JavaProject.Lab13.Lab13;
+import ru.Yasko.JavaProject.Lab15.Lab15;
 import ru.Yasko.JavaProject.lab12.Lab12;
 import ru.Yasko.JavaProject.lab7.Lab7;
 import ru.Yasko.JavaProject.Lab8.Lab8;
@@ -12,6 +13,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        System.out.println("Введите номер практической:");
         int lab=in.nextInt();
         switch(lab) {
             case 1: Lab1.run();
@@ -34,11 +36,20 @@ public class Main {
             break;
             case 11:
                 Lab11.run();
+                break;
             case 12:
                 Lab12.run();
+                break;
             case 13:
                 Lab13 lab13=new Lab13();
                 lab13.run();
+                break;
+            case 15:
+                Lab15.run();
+                break;
+            case 16:
+                Lab16.run();
+                break;
         }
     }
 }
