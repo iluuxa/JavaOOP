@@ -1,129 +1,86 @@
 package ru.Yasko.JavaProject.Lab15;
 
 public class Collection {
-    private ColElem first;
-    private int length=0;
+    private int[] a = new int[0];
 
     public void addElement(int data){
-        length++;
-        if(first!=null){
-            ColElem temp=first;
-            while(temp.getNext()!=null){
-                temp = temp.getNext();
-            }
-            temp.setNext(new ColElem(data));
-            temp.getNext().setIndex(length-1);
+        int[] temp = new int[a.length+1];
+        for(int i=0;i<a.length;i++){
+            temp[i]=a[i];
         }
-        else{
-            first = new ColElem(data);
-            first.setIndex(0);
-        }
+        temp[a.length]=data;
+        a=temp;
     }
     public void deleteElement(int ind){
-        ColElem temp=first;
-        boolean deleted=false;
-        if(ind==0){
-            first=first.getNext();
-            temp=first;
-            length--;
-            for (int i=0; i < length; i++) {
-                temp.setIndex(temp.getIndex()-1);
-                temp=temp.getNext();
-            }
-        }
-        else {
-            for (int i=0; i < length; i++) {
-                //System.out.println(temp.getIndex()+"   "+temp.getData());
-                if(deleted){
-                    temp.setIndex(temp.getIndex()-1);
-                }
-                if (i == ind - 1) {
-                    temp.setNext(temp.getNext().getNext());
-                    deleted=true;
-                    length--;
-                }
-                temp=temp.getNext();
-            }
-        }
-    }
-
-    public ColElem indexSearch(int ind){
-        ColElem temp = first;
-        for(int i=0;i<length;i++){
+        int[] temp = new int[a.length-1];
+        int k=0;
+        boolean found=false;
+        for(int i=0;i<a.length-1;i++){
             if(i==ind){
-                return temp;
+                found=true;
             }
-            temp=temp.getNext();
+            if(found) {
+                temp[i]=a[i+1];
+            }
+            else{
+                temp[i]=a[i];
+            }
         }
-        return null;
+        a=temp;
     }
 
-    public ColElem dataSearch(int data){
-        ColElem temp = first;
-        for(int i=0;i<length;i++){
-            if(temp.getData()==data){
-                return temp;
-            }
-            temp=temp.getNext();
-        }
-        return null;
+    public int indexSearch(int ind){
+       return a[ind];
     }
 
-    public ColElem minSearch(){
-        boolean noMin=true;
+    public int dataSearch(int data){
+        for(int i=0;i<a.length;i++){
+            if(a[i]==data){
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public int minSearch(){
         int min=0;
-        ColElem temp = first;
-        for (int i=0;i<length;i++){
-            if((temp.getData()<min)||(noMin)){
-                min=temp.getData();
+        boolean noMin=true;
+        for(int i=0;i<a.length;i++){
+            if((a[i]<min)||(noMin)){
+                min=a[i];
                 noMin=false;
             }
-            temp=temp.getNext();
         }
-        if (!noMin){
-            return dataSearch(min);
-        }
-        else{
-            return null;
-        }
+        return min;
     }
 
-    public ColElem maxSearch(){
-        boolean noMax=true;
+    public int maxSearch(){
         int max=0;
-        ColElem temp = first;
-        for (int i=0;i<length;i++){
-            if((temp.getData()>max)||(noMax)){
-                max=temp.getData();
+        boolean noMax=true;
+        for(int i=0;i<a.length;i++){
+            if((a[i]>max)||(noMax)){
+                max=a[i];
                 noMax=false;
             }
-            temp=temp.getNext();
         }
-        if (!noMax){
-            return dataSearch(max);
-        }
-        else{
-            return null;
-        }
+        return max;
     }
 
     public double averageCount(){
-        ColElem temp = first;
-        double sum=0;
-        if(length>0) {
-            for (int i = 0; i < length; i++) {
-                sum += temp.getData();
-                temp = temp.getNext();
-            }
-            return (sum / length);
+        int sum=0;
+        for (int i=0;i<a.length;i++){
+            sum+=a[i];
+        }
+        if(a.length!=0) {
+            return sum / a.length;
         }
         else{
-            System.out.println("Ошибка! В коллекции нет элементов");
+            System.out.println("Ошибка! Нет элементов");
             return 0;
         }
     }
 
     public int getLength() {
-        return length;
+        return a.length;
     }
 }

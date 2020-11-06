@@ -13,7 +13,6 @@ public class Lab15 {
             a.addElement((int)((Integer.MAX_VALUE/2 - Math.random()*Integer.MAX_VALUE)*2));
         }
 
-        ColElem temp;
         System.out.println("1 - Добавить элемент\n2 - Удалить элемент по индексу\n3 - Поиск по индексу\n4 - поиск по значению\n5 - найти минимальный элемент\n6 - найти максимальный элемент\n7 - Посчитать среднее арифметическое\n8 - отобразить элементы");
         int sw=in.nextInt();
         while(sw!=0){
@@ -25,49 +24,32 @@ public class Lab15 {
                     a.deleteElement(in.nextInt());
                     break;
                 case 3:
-                    temp = a.indexSearch(in.nextInt());
-                    if(temp!=null){
-                        System.out.println("Индекс: "+temp.getIndex()+"    Значение: "+temp.getData());
+                    n=in.nextInt();
+                    if((n<a.getLength())&&(n>=0)){
+                        System.out.println("Значение элемента: "+a.indexSearch(n));
                     }
-                    else{
-                        System.out.println("Элемент не найден");
+                    else {
+                        System.out.println("Некорректный индекс");
                     }
                     break;
                 case 4:
-                    temp = a.dataSearch(in.nextInt());
-                    if(temp!=null){
-                        System.out.println("Индекс: "+temp.getIndex()+"    Значение: "+temp.getData());
+                    n=a.dataSearch(in.nextInt());
+                    if(n!=-1){
+                        System.out.println("Индекс элемента: "+n);
                     }
-                    else{
-                        System.out.println("Элемент не найден");
+                    else {
+                        System.out.println("Нет элемента с этим значением");
                     }
                     break;
                 case 5:
-                    temp = a.minSearch();
-                    if(temp!=null){
-                        System.out.println("Индекс: "+temp.getIndex()+"    Значение: "+temp.getData());
-                    }
-                    else{
-                        System.out.println("Элемент не найден");
-                    }
+                    System.out.println(a.minSearch());
                     break;
                 case 6:
-                    temp = a.maxSearch();
-                    if(temp!=null){
-                        System.out.println("Индекс: "+temp.getIndex()+"    Значение: "+temp.getData());
-                    }
-                    else{
-                        System.out.println("Элемент не найден");
-                    }
+                    System.out.println(a.maxSearch());
                     break;
                 case 7:
                     System.out.println("Среднее арифметическое: "+a.averageCount());
                     break;
-                case 8:
-                    for(int i=0;i<a.getLength();i++){
-                        temp=a.indexSearch(i);
-                        System.out.println(temp.getIndex()+"    "+ temp.getData());
-                    }
             }
             System.out.println("Введите следующее действие: ");
             sw=in.nextInt();

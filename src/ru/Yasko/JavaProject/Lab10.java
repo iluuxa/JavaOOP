@@ -5,7 +5,7 @@ import java.util.Scanner;
 import static java.lang.Math.pow;
 
 public class Lab10 {
-    int res =0;
+    private int res =0;
     public void run(){
         int k,s,d,t,ts,a,b;
         double temp,prev;

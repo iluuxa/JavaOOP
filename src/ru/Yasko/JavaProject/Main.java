@@ -3,6 +3,7 @@ package ru.Yasko.JavaProject;
 import ru.Yasko.JavaProject.Lab11.Lab11;
 import ru.Yasko.JavaProject.Lab13.Lab13;
 import ru.Yasko.JavaProject.Lab15.Lab15;
+import ru.Yasko.JavaProject.Lab16.Lab16;
 import ru.Yasko.JavaProject.lab12.Lab12;
 import ru.Yasko.JavaProject.lab7.Lab7;
 import ru.Yasko.JavaProject.Lab8.Lab8;
@@ -49,6 +50,9 @@ public class Main {
                 break;
             case 16:
                 Lab16.run();
+                break;
+            case 18:
+                Lab18.run();
                 break;
         }
     }
