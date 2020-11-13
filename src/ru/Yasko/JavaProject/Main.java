@@ -54,6 +54,15 @@ public class Main {
             case 18:
                 Lab18.run();
                 break;
+            case 19:
+                Lab19.run();
+                break;
+            case 20:
+                Lab20.run();
+                break;
+            default:
+                System.out.println("Нет такой работы");
+                break;
         }
     }
 }

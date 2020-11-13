@@ -6,6 +6,7 @@ public class Lab18 {
     public static void run(){
         Scanner in = new Scanner(System.in);
         int sw=in.nextInt();
+        System.out.print("Введите действие:\n1 - Факторизация\n2 - Проверка на палиндром\n3 - Нахождение максимума в последовательности елых чисел");
         switch (sw){
             case 1:
                 break;
